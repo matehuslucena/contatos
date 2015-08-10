@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Salesforce Leads</h1>
+
+<p class='notice'><%=h flash[:notice] %></p>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Company</th>
+    <th>Job title</th>
+    <th>Phone</th>
+    <th>Website</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @leads.each do |lead| %>
+      <tr>
+        <td><%= lead.FirstName %></td>
+        <td><%= lead.LastName %></td>
+        <td><%= lead.Email %></td>
+        <td><%= lead.Company %></td>
+        <td><%= lead.Title %></td>
+        <td><%= lead.Phone %></td>
+        <td><%= lead.Website %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+

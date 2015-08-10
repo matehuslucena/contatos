@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Contatos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Company</th>
+      <th>Job title</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contatos.each do |contato| %>
+      <tr>
+        <td><%= contato.name %></td>
+        <td><%= contato.last_name %></td>
+        <td><%= contato.email %></td>
+        <td><%= contato.company %></td>
+        <td><%= contato.job_title %></td>
+        <td><%= contato.phone %></td>
+        <td><%= contato.website %></td>
+        <td><%= link_to 'Show', contato %></td>
+        <td><%= link_to 'Edit', edit_contato_path(contato) %></td>
+        <td><%= link_to 'Destroy', contato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Add Salesforce', new_lead_path(contato) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contato', new_contato_path %>
+<%= link_to 'List Salesforce Leads', leads_path %>
