@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
-gem 'lead_create', '~> 1.0.1'
+gem 'lead_create', '~> 1.0.2'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'will_paginate-bootstrap'
@@ -53,3 +53,7 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
