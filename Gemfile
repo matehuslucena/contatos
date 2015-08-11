@@ -34,7 +34,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
-gem 'lead_create', '~> 0.0.16'
+gem 'lead_create', '~> 1.0'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'will_paginate-bootstrap'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
