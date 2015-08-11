@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'contatos#index'
   get '/leads', to: 'leads#index', as: :leads
   get '/leads/:contato_id/new', to: 'leads#new', as: :new_lead
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
