@@ -8,6 +8,13 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
+<script type="text/javascript">
+    $(document).ready(function(){
+        setTimeout(function(){
+            $('.alert').remove();
+        }, 2500);
+    })
+</script>
 <body>
 <nav class="navbar-inner">
   <div class="navbar navbar-inverse navbar-fixed-top">

@@ -2,7 +2,7 @@
 
 <h1>Listing Contatos</h1>
 
-<table>
+<table id="table-board" class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -26,10 +26,10 @@
         <td><%= contato.job_title %></td>
         <td><%= contato.phone %></td>
         <td><%= contato.website %></td>
-        <td><%= link_to 'Show', contato %></td>
-        <td><%= link_to 'Edit', edit_contato_path(contato) %></td>
-        <td><%= link_to 'Destroy', contato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Add Salesforce', new_lead_path(contato) %></td>
+        <td class='acoes'><%= link_to 'Show', contato, :class => 'btn btn-primary btn-lg outline' %></td>
+        <td class='acoes'><%= link_to 'Edit', edit_contato_path(contato), :class => 'btn btn-primary btn-lg outline' %></td>
+        <td class='acoes'><%= link_to 'Destroy', contato, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-primary btn-lg outline' %></td>
+        <td class='acoes'><%= link_to 'Add Salesforce', new_lead_path(contato), :class => 'btn btn-primary btn-lg outline' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -37,5 +37,7 @@
 
 <br>
 
-<%= link_to 'New Contato', new_contato_path %>
-<%= link_to 'List Salesforce Leads', leads_path %>
+<div class='pager'><%= will_paginate @contatos, renderer: BootstrapPagination::Rails  %></div>
+
+<%= link_to 'New Contato', new_contato_path, :class => 'btn btn-primary btn-lg outline' %>
+<%= link_to 'List Salesforce Leads', leads_path, :class => 'btn btn-primary btn-lg outline' %>

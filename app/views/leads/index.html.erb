@@ -4,7 +4,7 @@
 
 <p class='notice'><%=h flash[:notice] %></p>
 
-<table>
+<table id="table-board" class="table">
   <thead>
   <tr>
     <th>Name</th>
@@ -36,5 +36,5 @@
 <br>
 <br>
 
-<%= link_to 'Back', contatos_path %>
+<%= link_to 'Back', contatos_path, :class => 'btn btn-primary btn-lg outline' %>
 
